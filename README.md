@@ -71,6 +71,25 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Start-Gateway.ps1 -Por
 
 安装教程：[CodeBuddy CLI 安装与登录](CodeBuddy-CLI安装与登录教程.md)。发布步骤：[PUBLISH.md](PUBLISH.md)。
 
+## 配套 Agent Skill
+
+本项目提供 `codebuddy-gateway` skill，指导支持技能的 AI 助手通过本机 Gateway 调用 CodeBuddy，完成多轮对话、代码生成和代码任务委托。
+
+### 安装到 Codex
+
+将仓库中的 `skills/codebuddy-gateway` 文件夹复制到：
+
+```text
+%USERPROFILE%\.codex\skills\codebuddy-gateway
+```
+
+重新打开聊天以加载技能，启动 Gateway 后，可以这样使用：
+
+```text
+使用 $codebuddy-gateway，让 CodeBuddy 编写并验证一个 Hello World 程序。
+```
+
+Skill 本身不提供模型服务。实际调用仍需安装 CodeBuddy CLI、完成账号登录并启动 Gateway；模型权限和费用由 CodeBuddy 账号决定。
 ## 官方参考
 
 - https://www.codebuddy.cn/docs/cli/quickstart
